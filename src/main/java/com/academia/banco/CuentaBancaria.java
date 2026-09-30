@@ -37,7 +37,7 @@ public class CuentaBancaria {
 
     public void depositar(BigDecimal monto) {
         BigDecimal m = validarMonto(monto);
-        saldo = saldo.subtract(m);
+        saldo = saldo.add(m);
         movimientos.add(new Movimiento(TipoMovimiento.DEPOSITO, m));
     }
 
